@@ -1,6 +1,6 @@
 # FydeOS 折腾笔记
 ## 解决pyqt5无法显示窗口的问题
-在FydeOS的Linux环境下，不论是PIL还是matplotlib还是opencv，都无法正常显示窗口，罪魁祸首就是pyqt5找不到`libxcb-util.so.1`这个库。解决方法：
+在FydeOS的Linux环境下，不论是PIL还是matplotlib，都无法正常显示窗口，罪魁祸首就是pyqt5找不到`libxcb-util.so.1`这个库。解决方法：
 ```sudo ln -s /usr/lib/x86_64-linux-gnu/libxcb-util.so.0 /usr/lib/x86_64-linux-gnu/libxcb-util.so.1```
 为了验证问题有没有解决，可以运行以下脚本测试：
 ```python
